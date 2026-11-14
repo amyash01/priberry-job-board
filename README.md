@@ -53,7 +53,7 @@ Run the automated tests:
 npm test
 ```
 
-The tests cover job listing, searching, saved-job storage, duplicate prevention, API operations, and error handling.
+The test suite covers job listing, searching, saved-job storage, duplicate prevention, API operations, and error handling.
 
 ## Saved Jobs API
 
@@ -71,7 +71,7 @@ Example POST request:
 }
 ```
 
-Here, `j2` is the ID of an existing job in `jobs.json`. The API uses this ID to identify which job to save.
+Here, `j2` is an example ID of an existing job in `jobs.json`.
 
 Saved job IDs are stored in `saved.json`, allowing them to persist after application restarts and browser refreshes.
 
