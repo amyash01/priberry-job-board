@@ -1,4 +1,3 @@
-
 # Job Board – Saved Jobs Feature
 
 A small job board built as part of a software development work sample. Users can browse and search internship listings, save jobs, view saved jobs, and remove them.
@@ -34,8 +33,8 @@ No external packages are required.
 Clone the repository:
 
 ```bash
-git clone <your-github-repository-url>
-cd job-board-starter
+git clone https://github.com/amyash01/priberry-job-board.git
+cd priberry-job-board
 ```
 
 Start the application:
@@ -71,6 +70,8 @@ Example POST request:
   "jobId": "j2"
 }
 ```
+
+Here, `j2` is the ID of an existing job in `jobs.json`. The API uses this ID to identify which job to save.
 
 Saved job IDs are stored in `saved.json`, allowing them to persist after application restarts and browser refreshes.
 
