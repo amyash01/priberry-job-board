@@ -1,0 +1,156 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Job Board</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: system-ui, sans-serif;
+        margin: 0 auto;
+        max-width: 640px;
+        padding: 24px 16px;
+        color: #222;
+        line-height: 1.5;
+      }
+
+      h1,
+      h2 {
+        color: #222;
+      }
+
+      h1 {
+        margin-bottom: 20px;
+      }
+
+      h2 {
+        margin-bottom: 8px;
+      }
+
+      section {
+        margin-top: 32px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 6px;
+        font-weight: 600;
+      }
+
+      input {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+      }
+
+      input:focus,
+      button:focus-visible {
+        outline: 2px solid #2563eb;
+        outline-offset: 2px;
+      }
+
+      ul {
+        padding: 0;
+        margin: 12px 0;
+      }
+
+      li {
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        list-style: none;
+        margin: 8px 0;
+        padding: 12px;
+      }
+
+      button {
+        cursor: pointer;
+        padding: 8px 12px;
+        border: 0;
+        border-radius: 6px;
+        font-size: 14px;
+      }
+
+      button:disabled {
+        cursor: not-allowed;
+        opacity: 0.6;
+      }
+
+      .save-button {
+        background: #2563eb;
+        color: white;
+      }
+
+      .remove-button {
+        background: #dc2626;
+        color: white;
+      }
+
+      .job-details {
+        margin-bottom: 12px;
+      }
+
+      .message {
+        color: #555;
+        font-size: 14px;
+      }
+
+      @media (max-width: 480px) {
+        body {
+          padding: 16px 12px;
+        }
+
+        li {
+          padding: 10px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <h1>Jobs</h1>
+
+      <section aria-labelledby="jobs-heading">
+        <h2 id="jobs-heading">Available Jobs</h2>
+
+        <label for="search">Search jobs</label>
+
+        <input
+          id="search"
+          type="search"
+          placeholder="Search by title, company or place"
+          aria-describedby="search-help"
+        />
+
+        <p id="search-help" class="message">
+          Search by job title, company or location.
+        </p>
+
+        <ul id="jobs" aria-label="Available job listings"></ul>
+      </section>
+
+      <section aria-labelledby="saved-heading">
+        <h2 id="saved-heading">Saved Jobs</h2>
+
+        <p
+          id="saved-message"
+          class="message"
+          aria-live="polite"
+        ></p>
+
+        <ul id="saved-jobs" aria-label="Your saved jobs"></ul>
+      </section>
+    </main>
+
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>
